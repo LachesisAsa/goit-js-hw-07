@@ -4,7 +4,8 @@ import { galleryItems } from "./gallery-items.js";
     return ` <div class="gallery__item">
     <a 
         class="gallery__link" 
-        href="${eItems.original}">
+        href="${eItems.original}"
+        onclick="event.preventDefault()">
       <img
         class="gallery__image"
         src="${eItems.preview}"
@@ -29,7 +30,7 @@ artGallery.addEventListener("click", (evt) => {
     if(!clickTarget.classList.contains("gallery__image")){
         return;
     }
-    const imageSrc = clickTarget.dataset.sourse;
+    const imageSrc = clickTarget.dataset.source;
     const imageAlt = clickTarget.alt;
     modal = basicLightbox.create(`<img src="${imageSrc}" alt="${imageAlt}" />`);
     modal.show();

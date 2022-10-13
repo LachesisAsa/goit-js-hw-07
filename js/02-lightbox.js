@@ -1,14 +1,14 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-const galleryMarkup = galleryItems.map((picture) => {
+const galleryMarkup = galleryItems.map((items) => {
   return `<li>
     <a class="gallery__item" 
-        href="${picture.original}" 
+        href="${items.original}" 
         onclick="event.preventDefault()">
       <img class="gallery__image" 
-        src="${picture.preview}" 
-        alt="${picture.description}" />
+        src="${items.preview}" 
+        alt="${items.description}" />
     </a>
     </li>`;
 });
